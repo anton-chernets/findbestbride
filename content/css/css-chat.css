@@ -1,0 +1,387 @@
+#chat-all {
+	width:100%;
+	height:100%;
+	#background-color: #efefef;
+	border: 1px solid #702b2c;
+	#background-image:url(../images/chat_bg.jpeg);
+	#border-radius:5px;
+}
+
+.chat-left {
+	width:240px;
+	float:left;
+	height:96%;
+}
+
+.user-online {
+	width:60%;
+	text-align:center;
+	margin: -25px auto 0 auto;
+	
+}
+
+
+.chat-right {
+	height:96%;
+	width:265px;
+	float:left;
+}
+
+.my-profile {
+	width:100%;
+	height:150px;
+	margin-top:-25px;
+
+}
+
+.clear-list {
+	width:80%;
+	border-radius:15px;	
+	margin: 5px auto;
+	
+}
+.chat-center {
+	width:595px;
+	height:96%;
+	float:left;
+	margin:0 3px;
+	#background-color: #fff;
+	
+}
+.chat-title {
+	text-align:center;
+	width:60%;
+	margin-left:auto;
+	margin-right:auto;
+	font-size: 20px;
+	#font-family:Gentium Basic;
+	color: #bb756c;
+    box-sizing: border-box;
+    transition: 0.3s all ease;
+	background: linear-gradient(to top, #dbdbdd, #fff);
+    border-radius:5px;
+	padding: 1px 6px;
+	text-shadow: 0 0 1px rgba(51, 51, 51, 0.28);
+}
+
+.chat-button {
+	text-align:center;
+	font-size: 16px;
+	margin: 7px 0;
+}
+
+.chat-button a
+{
+	text-decoration: none;
+    box-sizing: border-box;
+    transition: 0.3s all ease;
+	background: linear-gradient(to top, #dbdbdd, #fff);
+    border-radius:5px;
+	padding: 2px 10px;
+}
+.chat-button a:hover
+{
+    border-top-left-radius:5px;
+	border-top-right-radius:5px;
+    text-decoration: none;
+}
+
+.profile-button a {
+	border-top: 5px solid #337AB7;
+	
+}
+.profile-button a:hover {
+	border-top: 5px solid #bb756c;
+	
+}
+
+.video-button a {
+	border-top: 5px solid #702c2b;
+	
+}
+
+.video-button a:hover {
+	border-top: 5px solid #bb756c;
+	
+}
+
+.clear-button a {
+	border-top: 5px solid red;
+	
+}
+
+.clear-button a:hover {
+	border-top: 5px solid #bb756c;
+	
+}
+
+.prof-msg {
+	width:20%; 
+	height:180px; 
+	border: 0; 
+	float:left;
+	text-align:center;
+	#font-family:Gentium Basic;
+	#font-weight:bold;
+	font-size:16px;
+}
+
+.smile {
+	cursor:pointer;
+	width:20px;
+	margin:3px;
+}
+
+.help-chat {
+	cursor:pointer;
+	float: right;
+	margin-top: -30px;
+	margin-right: 5px;
+	
+}
+
+#chatbox{
+    display: block;
+    width: 100%;
+    height: 580px;
+    margin: 0 auto 35px auto;
+    /* border: 1px solid brown; */
+}
+#panelbox{
+    display: block;
+    height: 25px;
+    margin: 0 0;
+    padding: 5px;
+	#float:left;
+}
+#userbox{
+    display: block;
+    width: 100%;
+    height: 510px;
+    #float: left;
+    margin: 3px 0 2px 0;
+}
+
+#roomsbox{
+    display: block;
+    height: 300px;
+    margin: 0;
+    border: 2px solid #702b2c;
+	border-radius:5px;
+	background-color: #fff;
+}
+#historybox {
+	display: block;
+	height: 325px;
+	#width: 200px;
+	#float: left;
+	margin: 0;
+	#border: 2px solid green;
+	#border-radius:5px;
+	
+}
+#userbox,#roomsbox,#historybox{
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+#sendbox{
+    clear: both;
+    display: block;
+	width:78%;
+    /* height: 10%; */
+    margin: 0 5px 5px 3px;
+    #padding: 5px;
+    /* border: 1px solid blue; */
+	
+}
+#msgbox{
+   /*display: block;*/
+   height: 100px;
+   
+}
+#msgbox
+{
+   font-size: 1.2em;
+   width: 100%;
+   float: left;
+   margin: 0 auto;
+   border: 1px solid green;
+   border-radius: 5px;
+   background: #fff;
+}
+
+#sendmsg{
+    color: white;
+    font-weight: bold;
+    font-size: 1.3em;
+    margin: 5px 30%;
+    width: 40%;
+    background: #bc756c;
+    background-image: -webkit-linear-gradient(top, #bc756c, #ff0000);
+    background-image: -moz-linear-gradient(top, #bc756c, #ff0000);
+    background-image: -ms-linear-gradient(top, #bc756c, #ff0000);
+    background-image: -o-linear-gradient(top, #bc756c, #ff0000);
+    background-image: linear-gradient(to bottom, #bc756c, #ff0000);
+}
+
+#closeBtn{
+    color: white;
+    font-weight: bold;
+    font-size: 1.3em;
+    margin: 5px 30%;
+    width: 40%;
+    background: #bc756c;
+    background-image: -webkit-linear-gradient(top, #bc756c, #ff0000);
+    background-image: -moz-linear-gradient(top, #bc756c, #ff0000);
+    background-image: -ms-linear-gradient(top, #bc756c, #ff0000);
+    background-image: -o-linear-gradient(top, #bc756c, #ff0000);
+    background-image: linear-gradient(to bottom, #bc756c, #ff0000);
+}
+
+#smilebox{
+    display: block;
+    #height: 2em;
+    margin: 5px 5px;
+	background-color: #fff;
+}
+#smilebox img{
+    #margin:0 3px;
+}
+#userbox .user {
+   display: block; 
+   width: 270px;
+   height: 85px;
+   border: 1px #333 solid;
+}
+#historybox .user {
+   display: block; 
+   width: 270px;
+   height: 105px;
+   border: 1px #333 solid;
+}
+#historybox .photo {
+	width: 78px;
+	height: 85px;
+	margin-top: 3px;
+}
+#userbox .active{
+   /*background-color: darksalmon;*/
+   background-color: #bc756c;
+}
+
+.dtime{
+   font-style: italic;
+   color: rgba(0, 0, 0, 0.7);
+   font-size: 0.8em;
+   font-weight: normal;
+}
+.username-0{
+   margin-left: 5px; 
+   font-style: normal; 
+   font-weight: bold;
+   color: #BA55D3;
+}
+.username-1{
+   margin-left: 5px;
+   font-style: normal;
+   font-weight: bold;
+   color: RoyalBlue;
+}
+.photo{
+    display: block;
+    width: 78px;
+    height: 78px;
+    border: 1px solid #333;
+    float: left;
+    margin: 1px 10px 1px 1px;
+}
+.usrdata{
+    display: block;
+    hidden: overflow;
+}
+.uname{
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 5px;
+}
+.uage,
+.uaddress{
+    font-size: 0.9em;
+    font-style: normal;    
+}
+
+.textmsg{
+ color:#191970; 
+ padding-left: 15px;
+ padding-top: 5px;
+ ext-indent: 1.5em;
+}
+.msgbox-1,.msgbox-0{
+    display: block;
+    padding: 5px 5px 5px 10px;
+}
+.msgbox-1
+{
+background-color: #F5FFFA;    
+}
+.msgbox-0
+{
+background-color: #FFFAF0;    
+}
+.ustatus-0,.ustatus-1,.ucamera{
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-image: url("/content/img/flat-icons.png"); 
+    margin-left: 5px;
+    float: left;
+}
+.ustatus-1{
+    background-position: 0 32px;
+}
+
+.ustatus-0{
+    background-position: -60px 78px;
+}
+.ustatus-2{
+    background-position: -116px 32px;
+}
+.ucamera{
+    background-position: -60px 32px;
+}
+.umsgstatus-0,.umsgstatus-5,.umsgstatus-10,.umsgstatus-20,.umsgstatus-30{
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-image: url("/content/img/flat-icons.png"); 
+    margin-left: 5px;
+    float: left;
+}
+.umsgstatus-0{
+    background-position: 0 -42px;
+}
+.umsgstatus-5{
+    background-position: 0 px;
+}
+.umsgstatus-10{
+    background-position: -60px 0px;
+}
+.umsgstatus-20{
+    background-position: -116px 0px;
+}
+.umsgstatus-30{
+    background-position: -116px -42px;
+}
+
+#popup-container{
+	display: block;
+	position: fixed;
+	right: 0;
+	bottom: 0; 
+	z-index: 2000;
+	background: none repeat scroll 0 0 white;
+}
+
+GPFN54SCMW{padding:3px;}
+.GPFN54SCMW .GPFN54SCKW{font-size:12pt;text-align:center;line-height:20px;height:20px;background:#ffffcd;color:#c30;font-family:Arial;font-weight:bold;border:1px solid #cfcfcf;}
+.GPFN54SCBGD{display:block;border:1px solid #cfcfcf;width:260px;margin:0 0 5px 0;}.GPFN54SCBGD .GPFN54SCIFD{height:24px;vertical-align:middle;background:#ffffff;border-bottom:1px solid #cfcfcf;}.GPFN54SCBGD .GPFN54SCIFD .GPFN54SCJFD{line-height:24px;display:block;float:left;width:200px;margin:0 0 0 30px;text-align:center;font-size:12pt;color:blue;font-family:Arial;font-weight:bold;}.GPFN54SCBGD .GPFN54SCIFD .GPFN54SCMFD{margin:2px;display:block;float:right;width:21px;height:21px;cursor:pointer;}.GPFN54SCBGD .GPFN54SCGFD{height:255px;text-align:center;}.GPFN54SCBGD .GPFN54SCGFD .GPFN54SCFFD{width:100%;border-spacing:15px;}.GPFN54SCBGD .GPFN54SCGFD .GPFN54SCFFD .GPFN54SCPFD{width:116px;text-align:center;vertical-align:top;}.GPFN54SCBGD .GPFN54SCGFD .GPFN54SCFFD .GPFN54SCAGD{text-align:left;vertical-align:top;}.GPFN54SCBGD .GPFN54SCGFD .GPFN54SCFFD .GPFN54SCOFD{display:block;margin:0 auto;max-height:164px;max-width:114px;}.GPFN54SCBGD .GPFN54SCGFD .GPFN54SCFFD .GPFN54SCKFD{display:inline-block;text-align:center;margin:5px 0;font-size:12px;color:gray;width:50px;font-weight:normal;}.GPFN54SCBGD .GPFN54SCGFD .GPFN54SCHFD{display:block;max-width:144px;max-height:26px;cursor:pointer;position:absolute;margin:0 0 0 63px;}.GPFN54SCBGD .GPFN54SCNFD{color:#1546b9;}.GPFN54SCBGD .GPFN54SCLFD{border:1px solid #cfcfcf;margin:10px 0 0;min-height:4em;}

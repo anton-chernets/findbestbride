@@ -1,0 +1,164 @@
+<!-- div content -->
+<script type="text/javascript">
+function hide_show()
+{
+    var div=document.getElementById("div").style.display;
+    var link=document.getElementById("link").innerHTML;
+ 
+    
+    if(div=="")div="none";
+ 
+    if(div=="none")
+    {
+        div="block";
+        link="<?=$this->lang->line('profile_prev_photo_hide')?>";
+    }
+    
+    else
+    {
+        div="none";
+        link="<?=$this->lang->line('profile_prev_view_photo')?>";
+    }
+    
+    document.getElementById("div").style.display=div;
+    document.getElementById("link").innerHTML=link;
+}
+</script>
+<div id="maket-account-045">
+    
+    
+    <div class="line">
+    <img src="<?=base_url()?>content/img/line.png" style="float:left; margin-top: 30px; margin-left: 40px;" width="340" height="8px">
+        <div class="h2" style="float:left;" align="center"> <?=$info['name']?><?if ($info['age'] != ''): echo ', '.$info['age']; endif;?></div> <? if(isOnlineUser($info['last_online']) == false):?><div id="status-offline"><p>OFFLINE NOW</p></div><? else: ?><div id="status-online"><p>ONLINE NOW</p></div><?endif;?>
+<img src="<?=base_url()?>content/img/line.png" style="float:left; margin-top:30px;" width="340" height="8px">
+     </div>
+     
+ <div id="left_column">
+        <div id="block-foto"> 
+        
+        
+           <div class="big-foto"><? if($info['photo_link'] == ''): ?><img width="342" height="500" src="<?=base_url()?>content/img/no-foto.png"><? else: ?><img src="<?=base_url()?>profiles/photo/user_<?=$info['id']?>/<?=$info['photo_link']?>_342.jpg"><? endif; ?></div>
+        
+                <div class="profile-id"><?=sprintf($this->lang->line('profile_prev_userid'), $this->selfId)?></div>
+                             
+        
+       <? if ($photo != false) :?>
+		  <div class="s-link"> <a onClick="hide_show();" id="link"><?=$this->lang->line('profile_prev_view_photo')?></a></div>
+
+            <div id="div">
+            <? foreach ($photo as $row): 
+            	$server = ($row['photo_server'] == 1) ? base_url() : $this->mobSrc;
+            ?>
+            <div class="small-foto"><a href="<?=$server?>profiles/photo/user_<?=$info['id']?>/<?=$row['photo_name']?>_full.jpg"><img src="<?=$server?>profiles/photo/user_<?=$info['id']?>/<?=$row['photo_name']?>_105.jpg"></a></div>
+       
+             <? endforeach; ?>
+             </div>
+         <? endif; ?>
+          
+        </div>
+       
+             
+            
+      
+ </div>
+ 
+ <div id="content-prof">
+	<? if($this->isAuth != false && $this->userInfo['sex'] == 2): ?>
+	<? if(isOnlineUser($info['last_online']) == true):?>
+		<a href="<?=base_url()?>my/chat/start/<?=$info['id']?>" class="but-man-ichat">
+	<?else:?>
+		<a href="#." onClick="alert('<?=$this->lang->line('chat_user_offline')?>')" class="but-man-ichat">
+	<?endif;?>
+		<p><?=$this->lang->line('user_invite_chat')?></p></a>
+	<?endif;?>
+	<? if($this->isAuth != false && $this->userInfo['sex'] == 2): ?>
+	<? if(isOnlineUser($info['last_online']) == true):?>
+		<a href="<?=base_url()?>my/chat/start/<?=$info['id']?>/1" class="but-man-vchat">
+	<?else:?>
+		<a href="#." onClick="alert('<?=$this->lang->line('chat_user_offline')?>')" class="but-man-vchat">
+	<?endif;?>
+		<p>Invite to videochat</p></a>
+	<?endif;?>
+	
+		<a href="<?=base_url()?>my/letters/write/new/<?=$info['id']?>" class="but-man-let">
+		<p><?=$this->lang->line('user_write_letter')?></p></a>
+ 
+
+ <div class="profile-data">
+         <div class="col">
+          <div class="row-odd"><span class="h"><?=$this->lang->line('profile_edit_country')?>:</span><span class="h-txt"> <? $c = userCountry(); echo $c[$this->userInfo['country']]?></span></div>
+		 <div class="row-even"><span class="h"><?=$this->lang->line('profile_prev_city')?>:</span><span class="h-txt"> <? echo ($info['city'] != '') ? $info['city'] : $this->lang->line('profile_prev_no_info');?></span></div>
+		 <div class="row-odd"><span class="h"><?=$this->lang->line('profile_edit_marital')?>:</span><span class="h-txt"><?=$this->assistant->userMaritalStatus($info['marriage'])?></span></div>
+		 <div class="row-even"><span class="h"><?=$this->lang->line('profile_edit_children')?>:</span><span class="h-txt"><?=$this->assistant->userChildren($info['children'])?></span></div>
+		<div class="row-odd"><span class="h"><?=$this->lang->line('profile_edit_height')?>:</span><span class="h-txt"><? echo ($info['height'] != '' && $info['height'] != '0') ? getUserHeight($info['height']) : $this->lang->line('profile_prev_no_info');?></span></div>
+		<div class="row-even"><span class="h"><?=$this->lang->line('profile_edit_weight')?>:</span><span class="h-txt"><? echo ($info['weight'] != '' && $info['weight'] != '0') ? getUserWeight($info['weight']) : $this->lang->line('profile_prev_no_info');?></span></div>
+		<div class="row-odd"><span class="h"><?=$this->lang->line('profile_edit_eyes')?>:</span><span class="h-txt"><?=$this->assistant->userEyes($info['eyes'])?></span></div>   
+		    
+          </div>   
+         
+       <div class="col">            
+        	<div class="row-odd"><span class="h"><?=$this->lang->line('profile_edit_hair')?>:</span><span class="h-txt"><?=$this->assistant->userHair($info['hair'])?></span></div>
+			<div class="row-even"><span class="h"><?=$this->lang->line('profile_prev_occup')?>:</span><span class="h-txt"><? echo ($info['occupation'] != '') ? $info['occupation'] : $this->lang->line('profile_prev_no_info');?></span></div>
+			<div class="row-odd"><span class="h"><?=$this->lang->line('profile_edit_rel')?>:</span><span class="h-txt"><?=$this->assistant->userReligion($info['religion'])?></span></div>
+			<div class="row-even"><span class="h"><?=$this->lang->line('profile_prev_edu')?>:</span><span class="h-txt"><?=$this->assistant->userEdu($info['education'])?></span></div>
+			<div class="row-odd"><span class="h"><?=$this->lang->line('profile_prev_smoke')?>:</span> <span class="h-txt"><?=$this->assistant->userSmokeDrink($info['smoke'])?></span></div>
+			<div class="row-even"><span class="h"><?=$this->lang->line('profile_prev_drink')?>:</span><span class="h-txt"><?=$this->assistant->userSmokeDrink($info['drink'])?></span></div>
+	
+			
+         </div>
+ </div>
+ 
+	<? if($info['hobbies'] != ''): ?>
+    <div class="profile-info">
+						<div class="title"><?=$this->lang->line('profile_prev_hobby')?></div>
+						<?=$info['hobbies']?>
+     </div>
+     <? endif; ?>
+     <? if($info['age_from'] != '' && $info['age_to'] != ''): ?>
+     <div class="profile-info">
+				<div class="title"><?=$this->lang->line('profile_prev_age')?></div><?=sprintf($this->lang->line('profile_prev_age2'), $info['age_from'], $info['age_to'])?> 
+      </div>
+      <? endif; ?>
+      <? if($info['aoa'] != ''): ?>
+      <div class="profile-info">
+						<div class="title"><?=$this->lang->line('profile_edit_aoa')?></div>
+						<?=$info['aoa']?>
+		</div>
+		<? endif; ?>
+		<? if($info['about_me'] != ''): ?>
+       <div class="profile-info">
+						<div class="title"><?=$this->lang->line('profile_prev_about_me')?></div>
+						<?=$info['about_me']?>
+		</div>
+		<? endif; ?>
+        <? if($info['about_partner'] != ''):?><div class="profile-info">
+						<div class="title"><?=$this->lang->line('profile_prev_about_part')?></div>
+						<?=$info['about_partner']?><br />
+
+		</div>
+		<? endif; ?>
+     
+                               
+    
+</div>      
+
+
+
+<div id="clear"></div> 
+
+</div>
+ 
+<script type="text/javascript">
+$(function() {
+    $('#div a').lightBox({
+        imageLoading: '<?=base_url()?>content/img/gallery/loading.gif',
+        imageBtnClose: '<?=base_url()?>content/img/gallery/close.gif',
+        imageBtnPrev: '<?=base_url()?>content/img/gallery/prev.gif',
+        imageBtnNext: '<?=base_url()?>content/img/gallery/next.gif'
+
+    });
+});
+</script>
+<!--end div content-->  
+
+
