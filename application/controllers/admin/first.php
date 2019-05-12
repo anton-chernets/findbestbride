@@ -81,7 +81,7 @@ Class First extends MY_Controller
 				$this->load->library('email');
 				write_file(APPPATH . '/backup/mysql_backup.zip', $backup);
 				
-				$this->email->from('backup@testc4l.site');
+				$this->email->from('backup@findbestbride.com');
 				$this->email->subject('Backup of your website');
 				$this->email->attach(APPPATH . '/backup/mysql_backup.zip');
 				$this->email->message('This is your backup, date: '. date(d-m-Y));

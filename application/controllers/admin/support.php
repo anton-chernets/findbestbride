@@ -30,7 +30,7 @@ Class Support extends MY_Controller
 			$this->load->library('email', array('mailtype' => 'html'));
 			
 			//��������� ���������
-			$this->email->from('no-reply@testc4l.site');
+			$this->email->from('no-reply@findbestbride.com');
 			$this->email->to($emailTo);
 			$this->email->subject($subject);
 			$this->email->message($message);

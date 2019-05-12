@@ -40,7 +40,7 @@ Class Password extends MY_Controller
 				
 					$this->load->library('email');
 				
-					$this->email->from('pwd@testc4l.site');
+					$this->email->from('pwd@findbestbride.com');
 					$this->email->to($email);
 					$this->email->subject('Password recovery');
 					$this->email->message('Your new password: ' . $newPwd);
