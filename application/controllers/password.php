@@ -23,9 +23,11 @@ Class Password extends MY_Controller
 		if ($this->input->post('sendPassword'))
 		{
 			$rules = array(
-				'field'	=> 'msg_email',
-				'label'	=> 'Email',
-				'rules'	=> 'required|valid_email'
+                array (
+                    'field'	=> 'msg_email',
+                    'label'	=> 'Email',
+                    'rules'	=> 'required|valid_email'
+                )
 			);
 			$this->form_validation->set_rules($rules);
 			
@@ -43,7 +45,18 @@ Class Password extends MY_Controller
 					$this->email->from('pwd@findbestbride.com');
 					$this->email->to($email);
 					$this->email->subject('Password recovery');
-					$this->email->message('Your new password: ' . $newPwd);
+
+                    $data = array(
+                        'userName'=> $info['name'],
+                        'userLogin' => $info['email'],
+                        'userPassword' => $newPwd,
+                        'restoreLink' => base_url('password/'),
+                        'supportLink' => base_url('support/')
+                    );
+
+                    $mailBody = $this->load->view('emails/restore_password_mail.php',$data,TRUE);
+
+					$this->email->message($mailBody);
 					
 					$this->email->send();
 					
