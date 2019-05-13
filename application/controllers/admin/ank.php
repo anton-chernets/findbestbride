@@ -375,24 +375,24 @@ Class Ank extends MY_Controller
 			
 			$this->load->library('email', array('mailtype' => 'html'));
 				
-			$this->email->from('register@testc4l.site');
+			$this->email->from('register@findbestbride.com');
 			$this->email->to($info['email']);
-			$this->email->subject('REPLY: Welcome on testc4l.site! Your register parameters');
+			$this->email->subject('REPLY: Welcome on findbestbride.com! Your register parameters');
 				
 			$mailBody = '
 						<html>
 							<body>
 								Hello, <b>' . $info['name'] . '</b>!<br/><br/>
 								<b>This letter was sent again, because your account has not been activated</b><br/><br/>
-								Thank you for registering on our site! <a href="https://testc4l.site" target="_blank">https://testc4l.site/</a> it`s a unique opportunity to meet your soul mate through the Internet. Register for FREE, fill in the form and receive hundreds of proposals to get acquainted every day!
+								Thank you for registering on our site! <a href="https://findbestbride.com" target="_blank">https://findbestbride.com/</a> it`s a unique opportunity to meet your soul mate through the Internet. Register for FREE, fill in the form and receive hundreds of proposals to get acquainted every day!
 								<br/><br/>
-								For activating your profile click here: <a href="https://testc4l.site/activation/' . $info['activate_code'] . '">ACTIVATION LINK</a>.<br/><br/>
+								For activating your profile click here: <a href="https://findbestbride.com/activation/' . $info['activate_code'] . '">ACTIVATION LINK</a>.<br/><br/>
 								Your login: <b>'. $info['email'] . '</b>,<br/>><br/>
 								If you are not registered, just ignore the letter.<br/><br/>
 			
-								If you need help click here: <a href="https://testc4l.site/support/">SUPPORT</a><br/><br/>
+								If you need help click here: <a href="https://findbestbride.com/support/">SUPPORT</a><br/><br/>
 								Sincerely, Administration<br/>
-								<a href="https://testc4l.site" target="_blank">testc4l.site</a>
+								<a href="https://findbestbride.com" target="_blank">findbestbride.com</a>
 							</body>
 						</html>
 					';

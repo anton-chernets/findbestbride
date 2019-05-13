@@ -5,7 +5,7 @@ $lang['end_tag']	= '</body></html>';
 ///////////////////////////////////
 // ������� �����������
 
-$lang['letter_subject'] = 'testc4l.site - You have received new message!';
+$lang['letter_subject'] = 'findbestbride.com - You have received new message!';
 $lang['letter_body'] = '<p>Hi,</p>
 <p>%s sent you a new message with subject:</p>
 <table border="0" width="100%" cellpadding="15" cellspacing="0"><tbody><tr><td style="background-color:#e8e8e8">
@@ -17,7 +17,7 @@ $lang['letter_body'] = '<p>Hi,</p>
 </td></tr></tbody></table>
 <p>You can configure email notifications <a href="' . base_url() . 'my/edit/" style="color:#404040" target="_blank">on this page</a>.<br></p>
 <p>Sincerely, Administration<br>
-<a href="' . base_url() . '" style="color:#404040" target="_blank">testc4l.site</a></p>
+<a href="' . base_url() . '" style="color:#404040" target="_blank">findbestbride.com</a></p>
 ';
 
 

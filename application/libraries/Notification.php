@@ -2,10 +2,10 @@
 
 /**
  * 
- * testc4l.site
+ * findbestbride.com
  * 
  * @author 		Dmitriy Taftay
- * @link		https://testc4l.site
+ * @link		https://findbestbride.com
  * @copyright 	2017 (c) Dmitriy Taftay
  * 
  * �������� ��������� � ����������� ������������� �� e-mail
@@ -45,7 +45,7 @@ Class Notification
 			$this->CI->email->clear();
 			
 			$this->CI->email->to($send_email);
-			$this->CI->email->from('no-reply@testc4l.site');
+			$this->CI->email->from('no-reply@findbestbride.com');
 			
 			$this->CI->email->subject($this->CI->lang->line($type) . '_subject');
 			
@@ -103,7 +103,7 @@ Class Notification
 					// ��������� � ���������� ���������
 					$this->CI->email->clear();
 					
-					$this->CI->email->from('no-reply@testc4l.site');
+					$this->CI->email->from('no-reply@findbestbride.com');
 					$this->CI->email->to($row['email']);
 					$this->CI->email->subject($this->CI->lang->line('women_subject'));
 					$this->CI->email->message($message);

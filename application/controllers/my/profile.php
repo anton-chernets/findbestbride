@@ -339,7 +339,7 @@ Class Profile extends MY_Controller
 					// ���������� ��������� �� ����
 					$this->load->library('email', array('mailtype' => 'html'));
 					
-					$this->email->from('no-reply@testc4l.site');
+					$this->email->from('no-reply@findbestbride.com');
 					$this->email->to($email);
 					$this->email->subject('Your friend '. $this->userInfo['name'] .' was sent invite to you!');
 					
@@ -348,15 +348,15 @@ Class Profile extends MY_Controller
 							<body>
 								Dear <b>' . $this->input->post('name') . '</b>!<br/><br/>
 								Your friend '.$this->userInfo['name'].' '.$this->userInfo['lastname'].' invites
-								you to visit the site <a href="' . base_url() . '" target="_blank">testc4l.site</a>.<br/><br/>
-								<a href="' . base_url() . '" target="_blank">testc4l.site</a> it\'s a unique opportunity to meet
+								you to visit the site <a href="' . base_url() . '" target="_blank">findbestbride.com</a>.<br/><br/>
+								<a href="' . base_url() . '" target="_blank">findbestbride.com</a> it\'s a unique opportunity to meet
 								your soul mate through the Internet. Register for FREE, fill in the form and receive hundreds of
 								proposals to get acquaited every day!<br/><br/>
 								To go to the website <a href="' . base_url() . '" target="_blank">CLICK HERE</a>.<br/><br/>
 					
 								If you need help click here: <a href="' . base_url() . 'support/">SUPPORT</a><br/><br/>
 								Sincerely, Administration<br/>
-								<a href="' . base_url() . '" target="_blank">testc4l.site</a>
+								<a href="' . base_url() . '" target="_blank">findbestbride.com</a>
 								<br/><br/>
 								<p align="center">***THIS MESSAGE WAS SENT AUTOMATICALLY, DONT ANSWER TO IT***</p>
 							</body>
