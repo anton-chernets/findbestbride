@@ -120,7 +120,7 @@ if (['Firefox', 'Chrome', 'Supported'].indexOf(util.browser) !== -1) {
     var peer;
 
     peer = new Peer(info.selfId, {
-        host: 'server.findbestbride.com',
+        host: 'server.testc4l.site',
         port: 9000,
         path: '/video-chat',
     });
