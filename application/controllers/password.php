@@ -39,8 +39,8 @@ Class Password extends MY_Controller
 				{
 					$info = $this->pModel->getInfoByEmail($email);
 					$newPwd = $this->_gen();
-				
-					$this->load->library('email');
+
+                    $this->load->library('email', array('mailtype' => 'html'));
 				
 					$this->email->from('pwd@findbestbride.com');
 					$this->email->to($email);
