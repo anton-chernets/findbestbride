@@ -22,7 +22,7 @@
   							<div class="control-group">
   								<label class="control-label">Тема сообщения</label>
   								<div class="controls">
-  									<input name="e_subject" value="testc4l.site - Response to your request to the support" type="text" class="span6 m-wrap"/>
+  									<input name="e_subject" value="findbestbride.com - Response to your request to the support" type="text" class="span6 m-wrap"/>
   								</div>
   							</div>
   							

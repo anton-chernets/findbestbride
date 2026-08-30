@@ -34,7 +34,7 @@ Class Email extends MY_Controller
 			$message = '<html><body>' . $this->input->post('e_message') . '</body></html>';
 			
 			// email settings
-			$this->email->from('no-reply@testc4l.site');
+			$this->email->from('no-reply@findbestbride.com');
 			$this->email->to($profile['email']);
 			$this->email->subject($subject);
 			$this->email->message($message);
@@ -62,7 +62,7 @@ Class Email extends MY_Controller
 			$message = '<html><body>' . $this->input->post('e_message') . '</body></html>';
 				
 			// email settings
-			$this->email->from('no-reply@testc4l.site');
+			$this->email->from('no-reply@findbestbride.com');
 			$this->email->to($profile);
 			$this->email->subject($subject);
 			$this->email->message($message);
@@ -100,7 +100,7 @@ Class Email extends MY_Controller
 					$this->email->clear();
 					
 					// new message
-					$this->email->from('no-reply@testc4l.site');
+					$this->email->from('no-reply@findbestbride.com');
 					$this->email->to($row['email']);
 					$this->email->subject($subject);
 					$this->email->message($message);

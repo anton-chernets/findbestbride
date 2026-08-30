@@ -81,27 +81,19 @@ Class Main extends MY_Controller
 					// отправка логина, пароля и кода активации на мыло
 					$this->load->library('email', array('mailtype' => 'html'));
 					
-					$this->email->from('register@testc4l.site');
+					$this->email->from('register@findbestbride.com');
 					$this->email->to($insertUser['email']);
-					$this->email->subject('Welcome on testc4l.site! Your register parameters');
-					
-					$mailBody = '
-						<html>
-							<body>
-								Hello, <b>' . $insertUser['name'] . '</b>!<br/><br/>
-								Thank you for registering on our site! <a href="https://testc4l.site" target="_blank">https://testc4l.site/</a> it’s a unique opportunity to meet your soul mate through the Internet. Register for FREE, fill in the form and receive hundreds of proposals to get acquainted every day!
-								<br/><br/>
-								For activating your profile click here: <a href="https://testc4l.site/activation/' . $x . '">ACTIVATION LINK</a>.<br/><br/>
-								Your login: <b>'. $insertUser['email'] . '</b>,<br/>
-								password: <b>' . $this->input->post('user_password') . '</b><br/><br/>
-								If you are not registered, just ignore the letter.<br/><br/>
+					$this->email->subject('Welcome on findbestbride.com! Your register parameters');
 
-								If you need help click here: <a href="https://testc4l.site/support/">SUPPORT</a><br/><br/>
-								Sincerely, Administration<br/>
-								<a href="https://testc4l.site" target="_blank">testc4l.site</a>
-							</body>
-						</html> 	
-					';
+					$data = array(
+                        'userName'=> $this->input->post('user_real_name'),
+                        'userLogin' => $insertUser['email'],
+                        'userPassword' => $this->input->post('user_password'),
+                        'activationLink' => base_url('activation/' . $x),
+                        'supportLink' => base_url('support/')
+                    );
+
+					$mailBody = $this->load->view('emails/confirm_registration_mail.php',$data,TRUE);
 					$this->email->message($mailBody);
 					$this->email->send();
 					
